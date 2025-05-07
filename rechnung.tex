@@ -3,43 +3,43 @@
 \usepackage{style/rechnung}
 
 % Einstellungen
-\briefpapier		{ein}{style/bk.pdf}{style/wz.pdf}	% ein/aus, Briefkopf, Wasserzeichen
-\faltmarken			{ein}	% ein/aus
-\schrifttyp			{sans}	% sans/roman
-\sprache			{de}	% de/en
-\kundentabelle		{ein}	% ein/aus
-\umsatzsteuer		{19}	% Prozent
+\letterpaper{ein}{style/bk.pdf}{style/wz.pdf} % ein/aus, Briefkopf, Wasserzeichen
+\foldmarks{ein} % ein/aus
+\fonttype{sans} % sans/roman
+\lang{de} % de/en
+\customertable{ein} % ein/aus
+\vatpercent{19} % Prozent
 
 % Firmendaten
-\firmenname			{Obelix GmbH \& Co. KG}
-\firmenzusatz		{}
-\firmenanschrift	{Am Steinbruch 1}
-\firmenort			{Kleines gallisches Dorf}
-\firmenland			{Aremorica}
-\firmenwww			{www.hinkelstein.ix}
-\firmenemail		{info@hinkelstein.ix}
-\firmentel			{1976\,/\,1978\,-\,0}
-\firmenfax			{1976\,/\,1978\,-\,23}
-\firmenmobil		{}
-\firmeniban			{IX11920518925000123}
-\firmenbic			{GENOIXH1AOI}
-\firmenbank			{Gallische Bank Lutetia}
+\companyname{Obelix GmbH \& Co. KG}
+\companynamemore{}
+\companystreet{Am Steinbruch 1}
+\companycity{Kleines gallisches Dorf}
+\companycountry{Aremorica}
+\companywebsite{www.hinkelstein.ix}
+\companyemail{info@hinkelstein.ix}
+\companyphone{1976\,/\,1978\,-\,0}
+\companyfax{1976\,/\,1978\,-\,23}
+\companymobile{}
+\companyiban{IX11920518925000123}
+\companybic{GENOIXH1AOI}
+\companybank{Gallische Bank Lutetia}
 
 % Kundendaten
-\kundenname			{Hinkelsteininvest SE}
-\kundenzusatz		{- Abteilung Ankauf -}
-\kundenanschrift	{Lager 3}
-\kundenort			{1234 Laudanum}
-\kundenland			{Aremorica}
-\kundenkontakt		{Technokratus}
-\kundentel			{0123\,456789}
-\kundenemail		{technokratus@laudanum.rom}
+\customername{Hinkelsteininvest SE}
+\customernamemore{- Abteilung Ankauf -}
+\customerstreet{Lager 3}
+\customercity{1234 Laudanum}
+\customercountry{Aremorica}
+\customercontactperson{Technokratus}
+\customerphone{0123\,456789}
+\customeremail{technokratus@laudanum.rom}
 
 % Rechnungsdaten
-\rechnungsdatum		{21.04.1978}	% \heute = heutiges Datum
-\rechnungsnummer	{1978-001}
-\ustnummer			{IX918273645}
-\steuernummer		{12/345/6789}
+\invoicedate{\usetoday} % \heute = heutiges Datum
+\invoicenumber{1978-001}
+\vatidnumber{IX918273645}
+\taxnumber{12/345/6789}
 
 % Rechnungstext
 \begin{document}
@@ -50,32 +50,32 @@ ich erlaube mir entsprechend meiner erbrachten Leistung folgenden Betrag in Rech
 
 \vspace{10mm}
 
-\begin{tableistung}
-\leistung{Planung Hinkelstein}{02.1978}{14}{20}
-\leistung{Produktion Hinkelstein Prototyp\newline(Maßstab 1:10)}{02.1978}{6}{20}
-\leistung{Serienproduktion\newline(Charge 1 -- 25 Stück)}{03.1978}{125}{20}
-\end{tableistung}
+\begin{tableservice}
+\service{Planung Hinkelstein}{02.1978}{14}{20}
+\service{Produktion Hinkelstein Prototyp\newline(Maßstab 1:10)}{02.1978}{6}{20}
+\service{Serienproduktion\newline(Charge 1 -- 25 Stück)}{03.1978}{125}{20}
+\end{tableservice}
 
-\begin{tabartikel}
-\artikel{Hinkelstein}{25}{30}
-\end{tabartikel}
+\begin{tableproduct}
+\product{Hinkelstein}{25}{30}
+\end{tableproduct}
 
-\zwischensumme
+\subtotalamount
 
-\begin{tabreise}
-\reise{Gallisches Dorf--Lutetia}{1}{450}{0.3}
-\reise{Lutetia--Gallisches Dorf}{1}{450}{0.3}
-\end{tabreise}
+\begin{tabletrip}
+\trip{Gallisches Dorf--Lutetia}{1}{450}{0.3}
+\trip{Lutetia--Gallisches Dorf}{1}{450}{0.3}
+\end{tabletrip}
 
-\begin{tabnacht}
-\nacht{Mannekenpix}{24.01.--25.01.1978}{65}
-\end{tabnacht}
+\begin{tableaccommodation}
+\accommodation{Mannekenpix}{24.01.--25.01.1978}{65}
+\end{tableaccommodation}
 
-\begin{tabsonstiges}
-\sonstiges{Verladung}{100}
-\sonstiges{Lieferung ab Werk}{250}
-\end{tabsonstiges}
+\begin{tablemisc}
+\misc{Verladung}{100}
+\misc{Lieferung ab Werk}{250}
+\end{tablemisc}
 
-\gesamtbetrag{}
+\totalamount{}
 
 \end{document}
